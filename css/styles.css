@@ -1,5 +1,72 @@
+:root {
+  --first-title-color: #ffffff;
+  --second-title-color: #303030;
+  --first-btn-color: #ffffff;
+  --second-btn-color: #303030;
+  --gray-color: #555555;
+  --accent-color: #ff6c00;
+  --light-gray: #9da4bd;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: "Raleway", sans-serif;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+
+.after-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* -----------------HEADER------------------- */
+
+.header {
+  background-color: rgb(118, 114, 114);
 }
 
 .header-link,
@@ -8,18 +75,171 @@ body {
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
-  color: #ffffff;
+  color: var(--first-title-color);
 }
+
 .header-tel {
   text-transform: uppercase;
 }
 
+.header-link:hover,
+.header-link:focus {
+  color: var(--accent-color);
+}
+
 .header-btn {
-  font-family: inherit;
+  color: var(--first-btn-color);
+}
+
+/* ----------------------HERO---------------- */
+
+.hero {
+  background-color: beige;
+}
+
+.hero-link {
   font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: #ffffff;
+  font-size: 11px;
+  line-height: 1.36px;
+  letter-spacing: 0.2em;
+  color: var(--second-btn-color);
+}
+
+.hero-link:hover,
+.hero-link:focus {
+  color: var(--accent-color);
+}
+
+.hero-pre-title {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.hero-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+  color: var(--first-title-color);
+}
+
+.hero-after-title {
+  color: var(--light-gray);
+}
+
+/*-----------------------ABOUT------------------------*/
+
+.about-pre-title {
+  color: var(--second-title-color);
+}
+
+.about-title {
+  color: var(--second-title-color);
+}
+
+.about-after-title {
+  color: var(--gray-color);
+}
+
+.about-text {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: var(--gray-color);
+}
+
+.about-btn {
+  color: var(--second-btn-color);
+}
+
+/* ----------------PRICES------------- */
+
+.prices {
+  background-color: #555555;
+}
+.prices-pre-title {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.prices-title {
+  color: var(--first-btn-color);
+}
+
+.prices-item-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--light-gray);
+}
+.prices-btn {
+  color: var(--first-btn-color);
+}
+
+/* ---------------BENEFITS-------------- */
+
+.benefits-item .count {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(57 / 42);
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--second-title-color);
+}
+
+.benefits-item-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  /* text-align: center; */
+  color: var(--second-title-color);
+}
+
+.benefits-pre-title {
+  color: var(--second-title-color);
+}
+
+.benefits-title {
+  color: var(--second-title-color);
+}
+
+.benefits-after-title {
+  color: var(--gray-color);
+}
+
+/* --------------BARBERS---------------- */
+
+.barbers-pre-title {
+  color: var(--second-title-color);
+}
+
+.barbers-title {
+  color: var(--second-title-color);
+}
+
+.barbers-list {
+}
+.list {
+}
+.barbers-item {
+}
+
+.barbers-item-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  letter-spacing: 0.02em;
+  color: var(--second-title-color);
+}
+
+.barbers-item-text {
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+/* ----------------Gallery--------------- */
+
+.gallery-pre-title {
+  color: var(--second-title-color);
 }
