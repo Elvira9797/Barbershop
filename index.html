@@ -20,13 +20,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/desktop.css" />
   </head>
   <body>
     <header class="header">
       <div class="container header-container">
         <nav class="header-navigation">
           <a href="" class="header-logo">
-            <img src="./images/logo.svg" alt="logo" />
+            <svg class="header-logo-icon" width="67" height="55">
+              <use href="./images/icons.svg#icon-logo"></use>
+            </svg>
           </a>
           <ul class="header-list list">
             <li class="header-item">
@@ -43,15 +48,78 @@
             </li>
           </ul>
         </nav>
-        <a href="tel:+380441111111" class="header-tel link"
-          >+38 044 111 11 11</a
-        >
-        <button type="button" class="header-btn btn" data-modal-open>
-          Online-booking
+        <div class="header-contacts">
+          <a href="tel:+380441111111" class="header-tel link"
+            >+38 044 111 11 11</a
+          >
+          <button type="button" class="header-btn btn" data-modal-open>
+            Online-booking
+          </button>
+        </div>
+        <button type="button" class="menu-open-btn" data-menu-open>
+          <svg class="menu-open-icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
         </button>
+      </div>
+
+      <!-- ----------------MOBAL-MENU---------------- -->
+      <div class="menu-backdrop" data-menu>
+        <div class="mob-menu">
+          <div class="container">
+            <button type="button" class="modal-close" data-menu-close>
+              <svg width="16" height="16">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav>
+              <ul class="mob-menu-list list">
+                <li class="mob-menu-item">
+                  <a href="" class="mob-menu-link link active">About</a>
+                </li>
+                <li class="mob-menu-item">
+                  <a href="" class="mob-menu-link link">Services and prices</a>
+                </li>
+                <li class="mob-menu-item">
+                  <a href="" class="mob-menu-link link">Barbers</a>
+                </li>
+                <li class="mob-menu-item">
+                  <a href="" class="mob-menu-link link">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+            <a href="tel:+380441111111" class="mob-menu-tel link"
+              >+38 044 111 11 11</a
+            >
+            <button type="button" class="mob-menu-btn btn" data-modal-open>
+              Online-booking
+            </button>
+            <ul class="mob-soc-list list">
+              <li class="mob-soc-item">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="mob-soc-link link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-soc-item">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="mob-soc-link link"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
+      <!-- --------------HERO--------------- -->
       <section class="hero">
         <div class="container">
           <div class="hero-soc">
@@ -92,20 +160,74 @@
         <div class="container">
           <ul class="about-list list">
             <li class="about-item">
-              <img
-                src="./images/img1.jpg"
-                alt="barber haircut"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop-img-1.webp    1x,
+                    ./images/desktop-img-1@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/desktop-img-1.jpg    1x,
+                    ./images/desktop-img-1@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet-img-1.webp    1x,
+                    ./images/tablet-img-1@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet-img-1.jpg    1x,
+                    ./images/tablet-img-1@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img src="images/tablet-img-1.jpg" alt="barber haircut" />
+              </picture>
             </li>
             <li class="about-item">
-              <img
-                src="./images/img2.jpg"
-                alt="barber haircut"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop-img-2.webp    1x,
+                    ./images/desktop-img-2@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/desktop-img-2.jpg    1x,
+                    ./images/desktop-img-2@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet-img-2.webp    1x,
+                    ./images/tablet-img-2@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet-img-2.jpg    1x,
+                    ./images/tablet-img-2@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img src="./images/tablet-img-2.jpg" alt="barber haircut" />
+              </picture>
             </li>
           </ul>
           <div class="about-wrap">
@@ -212,7 +334,34 @@
           <ul class="barbers-list list">
             <li class="barbers-item">
               <div class="thumb">
-                <img src="./images/img3.jpg" alt="Extreme Barber" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desktop-barber-img-1.jpg    1x,
+                      ./images/desktop-barber-img-1@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet-barber-img-1.jpg    1x,
+                      ./images/tablet-barber-img-1@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mob-barber-img-1.jpg    1x,
+                      ./images/mob-barber-img-1@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/mob-barber-img-1.jpg"
+                    alt="Extreme Barber"
+                  />
+                </picture>
+
                 <p class="barbers-thumb-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
                   distinctio!
@@ -253,7 +402,34 @@
             </li>
             <li class="barbers-item">
               <div class="thumb">
-                <img src="./images/img4.jpg" alt="Extreme Barber" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desktop-barber-img-2.jpg    1x,
+                      ./images/desktop-barber-img-2@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet-barber-img-2.jpg    1x,
+                      ./images/tablet-barber-img-2@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mob-barber-img-2.jpg    1x,
+                      ./images/mob-barber-img-2@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/mob-barber-img-2.jpg"
+                    alt="Extreme Barber"
+                    width="370"
+                  />
+                </picture>
                 <p class="barbers-thumb-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
                   distinctio!
@@ -294,7 +470,34 @@
             </li>
             <li class="barbers-item">
               <div class="thumb">
-                <img src="./images/img5.jpg" alt="Extreme Barber" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desktop-barber-img-3.jpg    1x,
+                      ./images/desktop-barber-img-3@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet-barber-img-3.jpg    1x,
+                      ./images/tablet-barber-img-3@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mob-barber-img-3.jpg    1x,
+                      ./images/mob-barber-img-3@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/mob-barber-img-3.jpg"
+                    alt="Extreme Barber"
+                    width="370"
+                  />
+                </picture>
                 <p class="barbers-thumb-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
                   distinctio!
@@ -344,36 +547,124 @@
           <h2 class="visually-hidden">Gallery</h2>
           <ul class="gallery-list list">
             <li class="gallery-item">
-              <img
-                src="./images/gallery-img-1.jpg"
-                alt="gallery barber"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop-gallery-img-1.jpg    1x,
+                    ./images/desktop-gallery-img-1@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet-gallery-img-1.jpg    1x,
+                    ./images/tablet-gallery-img-1@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/mob-gallery-img-1.jpg    1x,
+                    ./images/mob-gallery-img-1@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/mob-gallery-img-1.jpg"
+                  alt="gallery barber"
+                />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img
-                src="./images/gallery-img-2.jpg"
-                alt="gallery barber"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop-gallery-img-2.jpg    1x,
+                    ./images/desktop-gallery-img-2@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet-gallery-img-2.jpg    1x,
+                    ./images/tablet-gallery-img-2@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/mob-gallery-img-2.jpg    1x,
+                    ./images/mob-gallery-img-2@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/mob-gallery-img-2.jpg"
+                  alt="gallery barber"
+                />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img
-                src="./images/gallery-img-3.jpg"
-                alt="gallery barber"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop-gallery-img-3.jpg    1x,
+                    ./images/desktop-gallery-img-3@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet-gallery-img-3.jpg    1x,
+                    ./images/tablet-gallery-img-3@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/mob-gallery-img-3.jpg    1x,
+                    ./images/mob-gallery-img-3@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/mob-gallery-img-3.jpg"
+                  alt="gallery barber"
+                />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img
-                src="./images/gallery-img-4.jpg"
-                alt="gallery barber"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop-gallery-img-4.jpg    1x,
+                    ./images/desktop-gallery-img-4@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet-gallery-img-4.jpg    1x,
+                    ./images/tablet-gallery-img-4@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/mob-gallery-img-4.jpg    1x,
+                    ./images/mob-gallery-img-4@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/mob-gallery-img-4.jpg"
+                  alt="gallery barber"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -409,45 +700,48 @@
           </section>
           <section class="contacts">
             <h2 class="contacts-title title">Contacts</h2>
-            <address class="contacts-adress">
-              <ul class="contacts-list list">
-                <li class="contacts-item">
-                  <a
-                    class="contacts-link-adress contacts-link link"
-                    href="https://goo.gl/maps/xWTrTZcv2NSKuAqPA"
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                  >
-                    <svg width="24" height="24">
-                      <use href="./images/icons.svg#icon-map-pin"></use>
-                    </svg>
-                    st. Vasilkivska, 7A <br />
-                    Kyiv, 08132</a
-                  >
-                </li>
-                <li class="contacts-item">
-                  <a href="tel:+380441111111" class="contacts-link link">
-                    <svg width="24" height="24">
-                      <use href="./images/icons.svg#icon-phone"></use>
-                    </svg>
-                    +38 044 111 11 11</a
-                  >
-                </li>
-                <li class="contacts-item">
-                  <a
-                    href="mailto:barbershop@email.com"
-                    class="contacts-link-mail contacts-link link"
-                  >
-                    <svg width="24" height="24">
-                      <use href="./images/icons.svg#icon-mail"></use>
-                    </svg>
-                    barbershop@email.com</a
-                  >
-                </li>
-              </ul>
-            </address>
-            <p class="contacts-subtitle pre-title">Working hours</p>
-            <p class="contacts-schedule">Every day from 9:00 to 22:00</p>
+            <div class="contacts-address-wrap">
+              <address class="contacts-adress">
+                <ul class="contacts-list list">
+                  <li class="contacts-item">
+                    <a
+                      class="contacts-link-adress contacts-link link"
+                      href="https://goo.gl/maps/xWTrTZcv2NSKuAqPA"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg width="24" height="24">
+                        <use href="./images/icons.svg#icon-map-pin"></use>
+                      </svg>
+                      st. Vasilkivska, 7A Kyiv, 08132</a
+                    >
+                  </li>
+                  <li class="contacts-item">
+                    <a href="tel:+380441111111" class="contacts-link link">
+                      <svg width="24" height="24">
+                        <use href="./images/icons.svg#icon-phone"></use>
+                      </svg>
+                      +38 044 111 11 11</a
+                    >
+                  </li>
+                  <li class="contacts-item">
+                    <a
+                      href="mailto:barbershop@email.com"
+                      class="contacts-link-mail contacts-link link"
+                    >
+                      <svg width="24" height="24">
+                        <use href="./images/icons.svg#icon-mail"></use>
+                      </svg>
+                      barbershop@email.com</a
+                    >
+                  </li>
+                </ul>
+              </address>
+              <div>
+                <p class="contacts-subtitle pre-title">Working hours</p>
+                <p class="contacts-schedule">Every day from 9:00 to 22:00</p>
+              </div>
+            </div>
           </section>
         </div>
       </div>
@@ -479,6 +773,7 @@
         </ul>
       </div>
     </footer>
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal" data-modal>
         <button type="button" class="modal-close" data-modal-close>
@@ -613,5 +908,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
