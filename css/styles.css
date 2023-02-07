@@ -142,6 +142,7 @@ img {
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   opacity: 1;
+  overflow: auto;
 
   transition: opacity var(--duration) var(--timing-function),
     visibility var(--duration) var(--timing-function);
